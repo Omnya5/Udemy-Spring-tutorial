@@ -1,0 +1,25 @@
+.navbar{
+    background-color: mediumaquamarine;
+    border-color: mediumaquamarine;
+}
+
+.navbar > .container-fluid > div > .navbar-nav > li > a {
+    font-weight: bold;
+}
+.navbar > .container-fluid > div > .navbar-nav > li > a:hover {
+    color: gold;
+    font-weight: bold;
+}
+.navbar > .container-fluid > .navbar-brand{
+    font-weight: bold;
+}
+
+.card > .card-header {
+    background-color: steelblue;
+    color: white;
+    font-weight: bold;
+}
+
+textarea {
+    width: 100%;
+}
