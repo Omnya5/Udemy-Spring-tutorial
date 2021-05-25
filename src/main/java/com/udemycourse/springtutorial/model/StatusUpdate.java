@@ -1,5 +1,7 @@
 package com.udemycourse.springtutorial.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -21,6 +23,7 @@ public class StatusUpdate {
     private String text;
 
     @Temporal(TemporalType.TIMESTAMP)
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private Date added;
 
     @PrePersist

@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class StatusUpdateService {
 
-    private final static int PAGESIZE = 3;
+    private final static int PAGESIZE = 10;
 
     @Autowired
     private StatusUpdateDao statusUpdateDao;
@@ -27,5 +27,13 @@ public class StatusUpdateService {
     public Page<StatusUpdate> getPage(int pageNumber) {
         PageRequest request = PageRequest.of(pageNumber-1, PAGESIZE, Sort.by("added").descending());
         return statusUpdateDao.findAll(request);
+    }
+
+    public void delete(Long id) {
+        statusUpdateDao.deleteById(id);
+    }
+
+    public StatusUpdate get(Long id) {
+        return statusUpdateDao.getOne(id);
     }
 }
